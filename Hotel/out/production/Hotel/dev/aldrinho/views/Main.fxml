@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="527.0"
+            prefWidth="620.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="dev.aldrinho.controllers.MainController">
+    <children>
+        <TabPane fx:id="tabPane" prefHeight="527.0" prefWidth="620.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab id="tabHoteles" fx:id="tabHoteles" closable="false" style="-fx-display: none" text="Hoteles">
+                    <content>
+                        <fx:include fx:id="hotelView" source="hotel/HotelView.fxml"/>
+                    </content>
+                </Tab>
+                <Tab id="tabUsuarios" fx:id="tabUsuarios" closable="false" text="Usuarios">
+                    <content>
+                        <fx:include fx:id="personaView" source="persona/PersonaView.fxml"/>
+                    </content>
+                </Tab>
+                <Tab id="tabMinuta" fx:id="tabMinuta" closable="false" text="Minuta">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0"/>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>

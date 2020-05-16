@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="hotelC@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.0">
+    <root id="1"/>
+    <database id="2" parent="1" name="hotelC">
+      <ObjectId>412006</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <schema id="3" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <IntrospectionTimestamp>2017-01-11.16:15:45.054</IntrospectionTimestamp>
+      <IntrospectionStateNumber>117501</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="4" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="5" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="6" parent="2" name="pg_temp_1">
+      <ObjectId>11320</ObjectId>
+    </schema>
+    <schema id="7" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11321</ObjectId>
+    </schema>
+    <schema id="8" parent="2" name="information_schema">
+      <ObjectId>11585</ObjectId>
+    </schema>
+    <sequence id="9" parent="3" name="hoteles_id_seq">
+      <ObjectId>412119</ObjectId>
+      <StateNumber>117497</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+    </sequence>
+    <sequence id="10" parent="3" name="personas_id_seq">
+      <ObjectId>412129</ObjectId>
+      <StateNumber>117498</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+    </sequence>
+    <sequence id="11" parent="3" name="usuarios_id_seq">
+      <ObjectId>412137</ObjectId>
+      <StateNumber>117499</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+    </sequence>
+    <table id="12" parent="3" name="hoteles">
+      <ObjectId>412121</ObjectId>
+      <StateNumber>117501</StateNumber>
+    </table>
+    <table id="13" parent="3" name="personas">
+      <ObjectId>412131</ObjectId>
+      <StateNumber>117501</StateNumber>
+    </table>
+    <table id="14" parent="3" name="usuarios">
+      <ObjectId>412139</ObjectId>
+      <StateNumber>117500</StateNumber>
+    </table>
+    <column id="15" parent="12" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>117497</StateNumber>
+      <DefaultExpression>nextval(&apos;hoteles_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="16" parent="12" name="ciudad">
+      <Position>2</Position>
+      <DataType>varchar(60)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>117497</StateNumber>
+    </column>
+    <column id="17" parent="12" name="direccion">
+      <Position>3</Position>
+      <DataType>varchar(60)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>117497</StateNumber>
+    </column>
+    <column id="18" parent="12" name="nombre">
+      <Position>4</Position>
+      <DataType>varchar(60)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>117497</StateNumber>
+    </column>
+    <column id="19" parent="12" name="pais">
+      <Position>5</Position>
+      <DataType>varchar(60)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>117497</StateNumber>
+    </column>
+    <index id="20" parent="12" name="hoteles_pkey">
+      <ObjectId>412125</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="21" parent="12" name="hoteles_direccion_key">
+      <ObjectId>412127</ObjectId>
+      <ColNames>direccion</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="22" parent="12" name="hoteles_pkey">
+      <ObjectId>412126</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>hoteles_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="23" parent="12" name="hoteles_direccion_key">
+      <ObjectId>412128</ObjectId>
+      <ColNames>direccion</ColNames>
+      <UnderlyingIndexName>hoteles_direccion_key</UnderlyingIndexName>
+    </key>
+    <column id="24" parent="13" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>117498</StateNumber>
+      <DefaultExpression>nextval(&apos;personas_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="25" parent="13" name="apellidos">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>117498</StateNumber>
+    </column>
+    <column id="26" parent="13" name="identificacion">
+      <Position>3</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>117498</StateNumber>
+    </column>
+    <column id="27" parent="13" name="nombres">
+      <Position>4</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>117498</StateNumber>
+    </column>
+    <column id="28" parent="13" name="hotel_id">
+      <Position>5</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>117498</StateNumber>
+    </column>
+    <column id="29" parent="13" name="usuario_id">
+      <Position>6</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>117498</StateNumber>
+    </column>
+    <index id="30" parent="13" name="personas_pkey">
+      <ObjectId>412135</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="31" parent="13" name="personas_pkey">
+      <ObjectId>412136</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>personas_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="32" parent="13" name="fk_personas_hotel_id">
+      <ObjectId>412152</ObjectId>
+      <ColNames>hotel_id</ColNames>
+      <RefTableName>hoteles</RefTableName>
+      <RefKeyName>hoteles_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="33" parent="13" name="fk_personas_usuario_id">
+      <ObjectId>412147</ObjectId>
+      <ColNames>usuario_id</ColNames>
+      <RefTableName>usuarios</RefTableName>
+      <RefKeyName>usuarios_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="34" parent="14" name="id">
+      <Position>1</Position>
+      <DataType>integer|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>117499</StateNumber>
+      <DefaultExpression>nextval(&apos;usuarios_id_seq&apos;::regclass)</DefaultExpression>
+    </column>
+    <column id="35" parent="14" name="cargo">
+      <Position>2</Position>
+      <DataType>varchar(60)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>117499</StateNumber>
+    </column>
+    <column id="36" parent="14" name="email">
+      <Position>3</Position>
+      <DataType>varchar(60)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>117499</StateNumber>
+    </column>
+    <column id="37" parent="14" name="fecha_registro">
+      <Position>4</Position>
+      <DataType>timestamp|0</DataType>
+      <StateNumber>117499</StateNumber>
+    </column>
+    <column id="38" parent="14" name="password">
+      <Position>5</Position>
+      <DataType>varchar(60)|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>117499</StateNumber>
+    </column>
+    <index id="39" parent="14" name="usuarios_pkey">
+      <ObjectId>412143</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="40" parent="14" name="usuarios_email_key">
+      <ObjectId>412145</ObjectId>
+      <ColNames>email</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="41" parent="14" name="usuarios_pkey">
+      <ObjectId>412144</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>usuarios_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="42" parent="14" name="usuarios_email_key">
+      <ObjectId>412146</ObjectId>
+      <ColNames>email</ColNames>
+      <UnderlyingIndexName>usuarios_email_key</UnderlyingIndexName>
+    </key>
+  </database-model>
+</dataSource>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+
+    <persistence-unit name="persistenceUnit" transaction-type="JTA">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
+        <jta-data-source>HotelServerResource</jta-data-source>
+        <class>dev.aldrinho.entity.Hotel</class>
+        <class>dev.aldrinho.entity.Persona</class>
+        <class>dev.aldrinho.entity.Usuario</class>
+        <class>org.springframework.data.jpa.domain.AbstractPersistable</class>
+        <class>org.springframework.data.jpa.domain.AbstractAuditable</class>
+        <properties>
+            <property name="eclipselink.weaving" value="static"/>
+            <property name="eclipselink.jdbc.url" value="jdbc:postgresql://localhost:5432/hotelC"/>
+            <property name="eclipselink.jdbc.driver" value="org.postgresql.Driver"/>
+            <property name="eclipselink.jdbc.user" value="postgres"/>
+            <property name="eclipselink.jdbc.password" value="Adm!n"/>
+            <property name="eclipselink.logging.level" value="ALL"/>
+            <property name="eclipselink.ddl-generation" value="create-tables"/>
+        </properties>
+    </persistence-unit>
+</persistence>
